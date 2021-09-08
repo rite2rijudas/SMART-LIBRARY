@@ -149,7 +149,7 @@ background-color: red;
               <p class="icon-text-class">BOOKS</p>
             </div>
           </a>
-          <a href="">
+          <a href="modPendingBooks.jsp">
             <div class="verify main">
               <i class="fa fa-hourglass-start" aria-hidden="true"></i>
               <p class="icon-text-class">VERIFY BOOKS</p>
