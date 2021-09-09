@@ -107,7 +107,15 @@
  <url-pattern>/moderatorBook</url-pattern>
  </servlet-mapping>
  
+ <servlet>
+ <servlet-name>j</servlet-name>
+ <servlet-class>com.moderator.modLogin</servlet-class>
+ </servlet>
   
+  <servlet-mapping>
+  <servlet-name>j</servlet-name>
+  <url-pattern>/modlogin</url-pattern>
+  </servlet-mapping>
 
 </web-app>
 </element>

@@ -8,15 +8,24 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+.container
+{
+
+
+}
+</style>
 </head>
 <body>
-<div method="post">
+<div class="container" >
+
 <%!int bid ,id;
-	String bname, aname, pname,e,c,loc, time,status;%>
+	String bname, aname, pname,e, time,status;%>
 
 			<%
 			ResultSet set = moderatorBook.viewbook();
-			while (set.next()) {
+			while (set.next()) 
+			{
 
 				bid = set.getInt("bId");
 				bname = set.getString("bName");
@@ -27,13 +36,15 @@
 				status = set.getString("status");
 			%>
 
-			<%=bid + " : " + bname + " " + aname + " : " + pname + ":"+e+": " + status + ": Date  :" + time%>
+			<%=bid + " : " + bname + " : " + aname + " : " + pname + ":"+e+": " + status + ": Date  :" + time%>
 
 
-			<!-- this section is used for send the fetched data to (adBlockUser.java) -->
-			<%="<a href='moderatorBook?bId=" + bid + "' ><button>Delete Pending Book</button></a>"%>
+			<!-- this section is used for send the fetched data to (moderatorBook.java) -->
+			<%="<a href='moderatorBook?bId=" + bid + "&bookname="+bname+"' ><button>Delete Pending Book</button></a>"%>
 			<button>Modify</button>
 			</div>
+			<br>
+			<br>
 			<%
 			}
 			%>
