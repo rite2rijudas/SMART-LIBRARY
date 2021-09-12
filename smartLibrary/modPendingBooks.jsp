@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Moderator Pending Book Page</title>
 <style>
 .container
 {
@@ -20,7 +20,7 @@
 <div class="container" >
 
 <%!int bid ,id;
-	String bname, aname, pname,e, time,status;%>
+	String bname, aname, pname,e, time,status,category;%>
 
 			<%
 			ResultSet set = moderatorBook.viewPendingBook();
@@ -33,6 +33,7 @@
 				pname = set.getString("publisherName");
 				e = set.getString("edition");
 				time = set.getString("bTime");
+				category=set.getString("category");
 				status = set.getString("status");
 			%>
 
@@ -43,6 +44,7 @@
 			<%="<a href='moderatorBook?bId=" + bid + "&bookname="+bname+"' ><button>Delete Pending Book</button></a>"%>
 			<%="<a href='moderatorBook?bookname=" + bname + "' ><button>View Pending Book</button></a>"%>
 			
+			<%="<a href='modModifyBook.jsp?bookname=" + bname + "&bId="+bid+"&authorname="+aname+"&publishername="+pname+"&editionname="+e+"&categoryname="+category+"' ><button>Modify</button></a>"%>
 			</div>
 			<br>
 			<br>

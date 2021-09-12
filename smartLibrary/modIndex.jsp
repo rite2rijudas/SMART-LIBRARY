@@ -130,7 +130,7 @@ background-color: red;
       <div class="content">
         <!-- side nav bar -->
         <div class="sidenav">
-          <a href="">
+          <a href="index.jsp">
             <div class="side-element">HOME</div>
         </a>
           <a href="">

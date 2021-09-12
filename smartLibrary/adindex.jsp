@@ -20,7 +20,7 @@
         <img src="./img/SMART LIBRARY.png" alt="logo" class="header-logo"/>
         <a href="#">
             <i class="fas fa-user-circle nav-icon"></i>
-            <p class="nav-icon-text">Hi! surya</p>
+            <p class="nav-icon-text">Hi! ADMIN</p>
         </a>
     </nav>
     <div class="maincontainer">
@@ -32,7 +32,7 @@
         </div>
         <!-- main content -->
         <div id="container" class="container">
-            <a href="viewBook.jsp">
+            <a href="adminBooks.jsp">
             <div id="books-con" class="books-con adjust-item"><i class="fas fa-book icon-class"></i>
                 <p class="icon-text-class">BOOKS</p>
             </div>
