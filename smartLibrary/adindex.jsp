@@ -47,7 +47,7 @@
                 <p class="icon-text-class">USERS</p>
             </div>
             </a>
-            <a href="">
+            <a href="adVerifyBook.jsp">
             <div id="pending-books-con" class="pending-books-con adjust-item"><i class="fas fa-exclamation-circle icon-class"></i>
                 <p class="icon-text-class">PENDING BOOKS</p>
             </div>

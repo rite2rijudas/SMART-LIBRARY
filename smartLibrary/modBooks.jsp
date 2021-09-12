@@ -24,7 +24,7 @@
   CATEGORY NAME: <input type="text" name="categoryname" placeholder="enter category name">
    </div>
   
-   <input type="file" name="file" multiple/>
+   <input type="file"  accept=".pdf" name="file" multiple/>
    <button type="submit" name="value" value="addbook">ADD BOOK</button>
    </form>
 </body>
