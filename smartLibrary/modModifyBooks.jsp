@@ -18,7 +18,7 @@
 	bid=request.getParameter("bId");
 	%>
 <div>
-	<!-- this form submit to the (adEditModerator.java) -->
+	<!-- this form submit to the (moderatorBook.java) -->
 			
 		<form action="moderatorBook" method="POST">
 
@@ -49,7 +49,7 @@
 			</div>
 			
 			<div>
-				<button type="submit" name="value" value="modify">MODIFY</button>
+				<button type="submit" name="value" value="modifybook">MODIFY</button>
 			</div>
 
 			<!--	

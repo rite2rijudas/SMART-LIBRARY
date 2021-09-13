@@ -44,7 +44,7 @@
 			<%="<a href='moderatorBook?bId=" + bid + "&bookname="+bname+"' ><button>Delete Pending Book</button></a>"%>
 			<%="<a href='moderatorBook?bookname=" + bname + "' ><button>View Pending Book</button></a>"%>
 			
-			<%="<a href='modModifyBook.jsp?bookname=" + bname + "&bId="+bid+"&authorname="+aname+"&publishername="+pname+"&editionname="+e+"&categoryname="+category+"' ><button>Modify</button></a>"%>
+			<%="<a href='modModifyPendingBook.jsp?bookname=" + bname + "&bId="+bid+"&authorname="+aname+"&publishername="+pname+"&editionname="+e+"&categoryname="+category+"' ><button>Modify</button></a>"%>
 			</div>
 			<br>
 			<br>
