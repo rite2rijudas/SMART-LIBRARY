@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Moderator's Home Page</title>
     <!-- import font awesome  -->
     <link
       rel="stylesheet"
@@ -108,7 +108,7 @@ background-color: red;
   background-color: green;
   align-items: center;
   color: yellow;
-  /* text-align: center; */
+  
   justify-items: center;
   justify-content: center;
 }
@@ -130,7 +130,7 @@ background-color: red;
       <div class="content">
         <!-- side nav bar -->
         <div class="sidenav">
-          <a href="index.jsp">
+          <a href="modIndex.jsp">
             <div class="side-element">HOME</div>
         </a>
           <a href="">

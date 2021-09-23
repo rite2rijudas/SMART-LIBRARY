@@ -17,20 +17,67 @@
 	integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
 	crossorigin="anonymous">
 <title>Admin's Moderator Page</title>
+<!-- import font awesome  -->
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 <style>
-.header {
-	height: 100vh;
-	width: 100%;
-	background-color: black;
-	color: white;
+
+a
+{
+ text-decoration: none;
+        color: white;
 }
 </style>
 </head>
-<body>
-	<div class="container-fluid  text-dark full-width-div">
-		<div class="d-flex justify-content-center">
+<body  >
+
+	<div class="container-fluid  text-dark ">
+		<nav class="navbar bg-dark  navbar-default fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href=""> <img
+						src="./img/SMART LIBRARY.png" alt="" width="100" height="30"
+						class="d-inline-block align-text-top"></a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+				<li>
+				<form class="container-fluid ">
+    <button class="btn btn-outline-success me-2" type="button"><a href="adindex.jsp">HOME</a></button>
+    <button class="btn btn-outline-success me-2" type="button"><a href="">ABOUT</a></button>
+    <button class="btn btn-outline-success me-2" type="button"><a href="">CONTACT</a></button>
+  </form></li>
+  </ul>
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span>  <i class="fas fa-user-circle nav-icon"></i>
+      VIEW YOUR ACCOUNT</span>
+							</a></li>
+
+				</ul>
+			</div>
+		</nav>
+		<!-- side nav -->
+		
+		
+		
+	</div>
+	<br>
+	<br>
+	<br>
+	
+ 
+	<div class="container-fluid  text-dark ">
+
+
+		<!-- <div class="d-flex justify-content-center">
+
 			<h1>:MODERATOR:</h1>
-		</div>
+		</div> -->
 
 		<header>
 			<div class="container ">
@@ -95,82 +142,81 @@
 
 					<div class="d-grid gap-2 col-6 mx-auto my-4">
 						<button type="submit" value="addNewModerator"
-							class=" btn-lg  btn-outline-success me-2">Add
-							New Moderator</button>
+							class=" btn-lg  btn-outline-success me-2">Add New
+							Moderator</button>
 					</div>
 
 				</form>
 			</div>
-			</header>
+		</header>
 
-			<br> <br>
+		<br> <br>
 
 
 
-			<div class="container ">
+		<div class="container ">
 
-				<div class="row justify-content-evenly">
-					<div class="col-1">ID</div>
-					<div class="col-2">FIRST NAME</div>
-					<div class="col-2">LAST NAME</div>
-					<div class="col-2">EMAIL ID</div>
-					<div class="col-4">DATE OF ADMIT</div>
-				</div>
-				<br>
-				<!-- this section is used for showing the list of moderators from (adViewModerator.java)  -->
-				<br>
-				<%!int id;
+			<div class="row justify-content-evenly">
+				<div class="col-1">ID</div>
+				<div class="col-2">FIRST NAME</div>
+				<div class="col-2">LAST NAME</div>
+				<div class="col-2">EMAIL ID</div>
+				<div class="col-4">DATE OF ADMIT</div>
+			</div>
+			<br>
+			<!-- this section is used for showing the list of moderators from (adViewModerator.java)  -->
+			<br>
+			<%!int id;
 	String firstname, lastname, email, password, date;%>
 
-				<%
-				ResultSet set = adViewModerator.view();
+			<%
+			ResultSet set = adViewModerator.view();
 
-				while (set.next()) {
+			while (set.next()) {
 
-					id = set.getInt("mId");
-					firstname = set.getString("mFirstName");
-					lastname = set.getString("mLastName");
-					email = set.getString("mEmail");
-					password = set.getString("mPassword");
-					date = set.getString("mTime");
-				%>
+				id = set.getInt("mId");
+				firstname = set.getString("mFirstName");
+				lastname = set.getString("mLastName");
+				email = set.getString("mEmail");
+				password = set.getString("mPassword");
+				date = set.getString("mTime");
+			%>
 
-				<div class="row justify-content-evenly">
-					<div class="col-1">
-						<%=id%>
-					</div>
-					<div class="col-2">
-						<%=firstname%>
-					</div>
-					<div class="col-2">
-						<%=lastname%>
-					</div>
-					<div class="col-2">
-						<%=email%>
-					</div>
-					<div class="col-3">
-						<%=date%>
-					</div>
-					<div class="col-1">
-
-						<a
-							href='adEditModerator.jsp?moderatorFirstName=" <%=firstname%> "&moderatorLastName=" <%=lastname%>
-	"&moderatorId=" <%=id%> "&moderatorEmail=" <%=email%> "&moderatorPassword="  
-		<%=password%> "'><button
-								class=" btn  btn-outline-primary me-2">Edit</button></a>
-					</div>
+			<div class="row justify-content-evenly">
+				<div class="col-1">
+					<%=id%>
 				</div>
+				<div class="col-2">
+					<%=firstname%>
+				</div>
+				<div class="col-2">
+					<%=lastname%>
+				</div>
+				<div class="col-2">
+					<%=email%>
+				</div>
+				<div class="col-3">
+					<%=date%>
+				</div>
+				<div class="col-1">
 
-
-
-				<!-- this section is used for send the fetched data to (adEditModerator.jsp) -->
-
-				<br> <br>
-				<%
-				}
-				%>
+					
+						<a href='adEditModerator.jsp?moderatorFirstName="<%=firstname%>"&moderatorLastName="<%=lastname%>"&moderatorId="<%=id%>"&moderatorEmail="<%=email%>"&moderatorPassword="  
+		<%=password%>"'><button
+							class=" btn  btn-outline-primary me-2">Edit</button></a>
+				</div>
 			</div>
-		
+
+
+
+			<!-- this section is used for send the fetched data to (adEditModerator.jsp) -->
+
+			<br> <br>
+			<%
+			}
+			%>
+		</div>
+
 	</div>
 
 
