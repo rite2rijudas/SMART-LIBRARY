@@ -143,7 +143,7 @@ a
 				<p><%=bklst.getPublisherName()%></p>
 			</div>
 			<div id="viewanddelete">
-				<a href="viewBook.jsp?id=<%=bklst.getbId()%>">view</a>
+				<a href='viewBook.jsp?id=<%=bklst.getbId()%>'>view</a>
 			</div>
 			<%
 			}

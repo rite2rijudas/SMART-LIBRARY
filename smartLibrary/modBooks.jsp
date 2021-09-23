@@ -112,7 +112,7 @@ a
 	<%=id + " : " + bname +" : "+ bauthorname+" : " + bpublishername + " : "+bcategory+" : Date of add/Approve :" + bdate%>
 
 
-	<!-- this section is used for send the fetched data to (adEditModerator.jsp) -->
+	<!-- this section is used for send the fetched data to (modModifyBooks.jsp) -->
 	<%="<a href='modModifyBooks.jsp?bookname=" + bname + "&bId="+id+"&authorname="+bauthorname+"&publishername="+bpublishername+"&editionname="+bedition+"&categoryname="+bcategory+"' ><button>MODIFY</button></a>"%>
 	<br>
 	<br>

@@ -125,7 +125,7 @@ a
         <td><%=lastname%></td>
         <td><%=email%></td>
         <td><%=date%></td>
-        <td><%="<a href='adBlockUser?userEmail="+ email +"' ><button >Block User</button></a>"%></td>
+        <td><a href='adBlockUser?userEmail=<%=email%>'><button  class="btn btn-outline-danger text-dark">Block User</button></a></td>
 			
 			
 			<%
@@ -170,7 +170,7 @@ a
 			<td><%=bemail%></td>
 			<td><%=bdate%></td>
 			<td>
-			<a href='adBlockUser?bEmail=<%=bemail%>'><button>UNBLOCK</button></a>
+			<a href='adBlockUser?bEmail=<%=bemail%>'><button  class="btn btn-outline-success text-dark">UNBLOCK</button></a>
 			</td>
 			</tr>
 			</tbody>
