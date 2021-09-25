@@ -118,7 +118,7 @@ a
 				date = set.getString("uTime");
 			%>
 <tbody>
-		<%-- 	<%=id +" : "+ firstname +" "+ lastname +" : "+ email +": Date of login :"+ date%> --%>
+		
 <tr>
         <td><%=id%></td>
         <td><%=firstname%></td>
@@ -127,11 +127,11 @@ a
         <td><%=date%></td>
         <td><a href='adBlockUser?userEmail=<%=email%>'><button  class="btn btn-outline-danger text-dark">Block User</button></a></td>
 			
-			
+		</tr>	
 			<%
 			}
 			%>
-      </tr>
+      
 
 			<!-- this section is used for send the fetched data to (adBlockUser.java) -->
 			</tbody>

@@ -82,33 +82,68 @@ a
 		<form action="moderatorBook" method="POST">
 
 
-			<div>
-				 The existing Book ID :
-				<%="<input type='text' name='bId' value=" + bid + ">"%>
-			</div>
-			<div>
-				Enter the Book  Name :
-				<%="<input type='text' name='bookname' value=" + bname + ">"%>
-			</div>
-			<div>
-				Enter the Book Author Name :
-				<%="<input type='text' name='authorname' value=" + bauthorname + ">"%>
-			</div>
-			<div>
-				Enter the Book Publisher Name:
-				<%="<input type='text' name='publishername' value=" + bpublishername + ">"%>
-			</div>
-			<div>
-				Enter the Book Edition:
-				<%="<input type='text' name='editionname' value=" + bedition + ">"%>
-			</div>
-			<div>
-				Enter the Book Category:
-				<%="<input type='text' name='categoryname' value=" + bcategory + ">"%>
+			<div class="row mt-4">
+			<label for="colFormLabelLg"
+							class="col-sm-2 col-form-label col-form-label-lg">The existing Book ID :</label>
+				 
+				 <div class="col-sm-10">
+				<input type='text' class="form-control form-control-lg"
+								id="colFormLabelLg"  name='bId' value=<%=bid%>>
+				</div>
 			</div>
 			
-			<div>
-				<button type="submit" name="value" value="modify">MODIFY</button>
+			<div class="row mt-4">
+			<label for="colFormLabelLg"
+							class="col-sm-2 col-form-label col-form-label-lg">Enter the Book  Name :</label>
+				
+				<div class="col-sm-10">
+				<input type='text'  class="form-control form-control-lg"
+								id="colFormLabelLg" name='bookname' value=<%=bname%>>
+				</div>
+			</div>
+			
+			<div class="row mt-4">
+			<label for="colFormLabelLg"
+							class="col-sm-2 col-form-label col-form-label-lg">Enter the Book Author Name :</label>
+				
+				<div class="col-sm-10">
+				<input type='text'  class="form-control form-control-lg"
+								id="colFormLabelLg" name='authorname' value=<%=bauthorname%>>
+				</div>
+			</div>
+			
+			<div class="row mt-4">
+			<label for="colFormLabelLg"
+							class="col-sm-2 col-form-label col-form-label-lg">Enter the Book Publisher Name:</label>
+				
+				<div class="col-sm-10">
+				<input type='text'  class="form-control form-control-lg"
+								id="colFormLabelLg" name='publishername' value=<%=bpublishername%>>
+				</div>
+			</div>
+			
+			<div class="row mt-4">
+			<label for="colFormLabelLg"
+							class="col-sm-2 col-form-label col-form-label-lg">Enter the Book Edition:</label>
+				
+				<div class="col-sm-10">
+				<input type='text' class="form-control form-control-lg"
+								id="colFormLabelLg"  name='editionname' value=<%=bedition%>>
+				</div>
+			</div>
+			
+			<div class="row mt-4">
+			<label for="colFormLabelLg"
+							class="col-sm-2 col-form-label col-form-label-lg">Enter the Book Category:</label>
+				
+				<div class="col-sm-10">
+				<input type='text'  class="form-control form-control-lg"
+								id="colFormLabelLg" name='categoryname' value=<%=bcategory%>>
+				</div>
+			</div>
+			
+			<div class="d-grid gap-2 col-6 mx-auto my-4 ">
+				<button type="submit" name="value" class="btn btn-outline-danger me-2 btn-primary btn-lg text-white"  value="modify">MODIFY</button>
 			</div>
 
 			<!--	

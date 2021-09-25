@@ -200,6 +200,7 @@ a
 				</div>
 				<div class="col-1">
 
+			<!-- this section is used for send the fetched data to (adEditModerator.jsp) -->
 					
 						<a href='adEditModerator.jsp?moderatorFirstName="<%=firstname%>"&moderatorLastName="<%=lastname%>"&moderatorId="<%=id%>"&moderatorEmail="<%=email%>"&moderatorPassword="  
 		<%=password%>"'><button
@@ -209,7 +210,6 @@ a
 
 
 
-			<!-- this section is used for send the fetched data to (adEditModerator.jsp) -->
 
 			<br> <br>
 			<%

@@ -68,8 +68,32 @@ a
 	<br>
 	<br>
 
-<div class="container" >
+<div class="container-fluid" >
 
+ <div class="d-flex justify-content-center">
+ <h1>: PENDING BOOKS :</h1>
+ </div>
+ 
+ 
+ <table class="table">
+			
+  <thead class="table-dark">
+    <tr>
+        <th>ID</th>
+        <th>Book Name</th>
+        <th>Author Name</th>
+        <th>Publisher Name</th>
+        <th>Edition</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+  </thead>
+ 
+ 
 <%!int bid ,id;
 	String bname, aname, pname,e, time,status,category;%>
 
@@ -88,23 +112,37 @@ a
 				category= set.getString("category");
 				
 			%>
+<tbody>
 
-			<%=bid + " : " + bname + " : " + aname + " : " + pname + ":"+e+":"+category+": " + status + ": Date  :" + time%>
+<tr>
+        <td><%=bid%></td>
+        <td><%=bname%></td>
+        <td><%=aname%></td>
+        <td><%=pname%></td>
+        <td><%=e%></td>
+        <td><%=category%></td>
+        <td><%=status%></td>
+        <td><%=time%></td>
+        
+        <!-- this section is used for send the fetched data to (adBookVerify.java) -->
+          <td><a href='adBookVerify?bookname=<%=bname%>&bId=<%=bid%>&authorname=<%=aname%>&publishername=<%=pname%>&editionname=<%=e%>&categoryname=<%=category%>>'><button  class="btn btn-outline-success text-dark">Approve</button></a></td>
+          
+          <!-- this section is used for send the fetched data to (moderatorBook.java) -->
+           <td><a href='moderatorBook?bookname=<%=bname%>'><button  class="btn btn-outline-info text-dark">View Pending Book</button></a></td>
+         <td><a href='moderatorBook?bId=<%=bid%>&bookname=<%=bname%>'><button  class="btn btn-outline-danger text-dark">Decline</button></a></td>
+ 			 
+		</tr>	
 
-            <!-- this section is used for send the fetched data to (adBookVerify.java) -->
-			<%="<a href='adBookVerify?bookname=" + bname + "&bId="+bid+"&authorname="+aname+"&publishername="+pname+"&editionname="+e+"&categoryname="+category+"' ><button>Approve</button></a>"%>
 
-
-			<!-- this section is used for send the fetched data to (moderatorBook.java) -->
-			<%="<a href='moderatorBook?bookname=" + bname + "' ><button>View Pending Book</button></a>"%>
-			<%="<a href='moderatorBook?bId=" + bid + "&bookname="+bname+"' ><button>Decline</button></a>"%>
-			
-			</div>
-			<br>
-			<br>
 			<%
 			}
 			%>
+			</tbody>
+			</table>
+			</div>
+			<br>
+			<br>
+			
 		
 <script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
