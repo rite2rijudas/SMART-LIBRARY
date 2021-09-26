@@ -121,11 +121,15 @@ a
         <td><%=status%></td>
         <td><%=time%></td>
 
+
+<td><a href='moderatorBook?bookname=<%=bname%>'><button  class="btn btn-outline-info text-dark">View Pending Book</button></a></td>
+<td><a href='modModifyPendingBook.jsp?bookname=<%=bname%>&bId=<%=bid%>&authorname=<%=aname%>&publishername=<%=pname%>&editionname=<%=e%>&categoryname=<%=category%>>'><button  class="btn btn-outline-success text-dark">Modify</button></a></td>
+<td><a href='moderatorBook?bookname=<%=bname%>&bId=<%=bid%>'><button  class="btn btn-outline-danger text-dark">Delete</button></a></td>
 	<!-- this section is used for send the fetched data to (moderatorBook.java) -->
-			<td><%="<a href='moderatorBook?bookname=" + bname + "' ><button>View Pending Book</button></a>"%></td>
+			<%-- <td><%="<a href='moderatorBook?bookname=" + bname + "' ><button></button></a>"%></td>
 			<td><%="<a href='modModifyPendingBook.jsp?bookname=" + bname + "&bId="+bid+"&authorname="+aname+"&publishername="+pname+"&editionname="+e+"&categoryname="+category+"' ><button>Modify</button></a>"%></td>
 			<td><%="<a href='moderatorBook?bId=" + bid + "&bookname="+bname+"' ><button>Delete Pending Book</button></a>"%></td>
-			
+			 --%>
 			</tr>
 			
 			<%
