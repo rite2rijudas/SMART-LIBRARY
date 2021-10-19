@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Roboto;
+}
+#back{
+height: 100vh;
+width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+background-image: url("../img/background.png");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+#back1{
+display: grid;
+grid-template-columns: 44vw 44vw;
+margin: 10px 10px;
+width: 88vw;
+height: 81vh;
+box-shadow: 3px 3px 50px 10px rgba(0, 0, 0, 0.25);
+}
+#back2{
+display: flex;
+background-color: white;
+justify-content: center;
+align-items: center;
+}
+#back3{
+background-color: white;
+}
+.heading{
+text-align: center;
+font-family:Roboto;
+font-style: normal;
+color: #2C8FFF;
+font-weight: 700; 
+font-size: 35px;
+margin-top: 40px;
+}
+.button__text{
+margin-top: 10px;
+margin-bottom: 10px ;
+text-align: center;
+}
+.button__text a{
+text-decoration: none;
+color: #2C8FFF;
+font-weight: 500; 
+font-size: 22px;
+
+}
+.input{
+margin: 10px 83px;
+border: 2px solid #95D9FF;
+border-radius: 27px;
+background-color: #F0F9FF;
+color:black;
+height: 40px;
+width: 480px;
+font-size: 18px;
+outline-style:none;
+padding-left: 30px;
+box-sizing: border-box;
+}
+.input::placeholder{
+    color: #838E95;
+    font-size: 18px;
+}
+.input:focus{
+    border: 4px solid #2c8fff;
+    box-shadow: 1px 1px 10px 5px rgba(0, 26, 255, 0.25);
+    
+}
+input[type="submit"]{
+margin-top: 10px;
+padding: 8px 30px;
+border-radius: 35px;
+background-color: #2C8FFF;
+color: #ffffff;
+border: 2px solid white;
+font-weight: 700;
+font-size: 20px;
+
+} 
+#bt1{
+padding: 6px 30px;
+margin: 0px 20px;
+background-color: #FFFFFF;
+border: 2px solid #2C8FFF;
+border-radius: 35px;
+color: #2C8FFF;
+font-weight: 500;
+font-size: 20px;
+}
+#bt2{
+color: #2C8FFF;
+font-weight: 500; 
+font-size: 22px;
+}
+.foot{
+margin-left: 120px;
+}
+input[type="submit"]:hover{
+background-color: white;
+color:#2C8FFF;
+border: 2px solid #2C8FFF;
+}
+#bt1:hover{
+background-color: #2C8FFF;
+color: white;
+}
+.register-form{
+   text-align: center;
+   margin-top: 20px;
+}
+.foot{
+    text-align: center;
+    margin: 0;
+}

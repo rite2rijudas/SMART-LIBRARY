@@ -1,6 +1,5 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="com.moderator.moderatorBook"%>
-<%@page import="com.moderator.moderatorBook"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -24,8 +23,9 @@
       referrerpolicy="no-referrer"
     />
 
-<title>Moderator Pending Book Page</title>
+<title>Admin Pending Book Verify</title>
 <style>
+
 a
 {
  text-decoration: none;
@@ -59,6 +59,9 @@ a
 				</ul>
 			</div>
 		</nav>
+		<!-- side nav -->
+		
+		
 		
 	</div>
 	<br>
@@ -66,9 +69,11 @@ a
 	<br>
 
 <div class="container-fluid" >
-<div class="d-flex justify-content-center">
+
+ <div class="d-flex justify-content-center">
  <h1>: PENDING BOOKS :</h1>
  </div>
+ 
  
  <table class="table">
 			
@@ -89,7 +94,6 @@ a
   </thead>
  
  
- 
 <%!int bid ,id;
 	String bname, aname, pname,e, time,status,category;%>
 
@@ -104,11 +108,10 @@ a
 				pname = set.getString("publisherName");
 				e = set.getString("edition");
 				time = set.getString("bTime");
-				category=set.getString("category");
 				status = set.getString("status");
+				category= set.getString("category");
+				
 			%>
-
-
 <tbody>
 
 <tr>
@@ -120,24 +123,30 @@ a
         <td><%=category%></td>
         <td><%=status%></td>
         <td><%=time%></td>
+        
+        <!-- this section is used for send the fetched data to (adBookVerify.java) -->
+          <td><a href='adBookVerify?bookname=<%=bname%>&bId=<%=bid%>&authorname=<%=aname%>&publishername=<%=pname%>&editionname=<%=e%>&categoryname=<%=category%>>'><button  class="btn btn-outline-success text-dark">Approve</button></a></td>
+          
+          <!-- this section is used for send the fetched data to (moderatorBook.java) -->
+           <td><a href='moderatorBook?bookname=<%=bname%>'><button  class="btn btn-outline-info text-dark">View Pending Book</button></a></td>
+         <td><a href='moderatorBook?bId=<%=bid%>&bookname=<%=bname%>'><button  class="btn btn-outline-danger text-dark">Decline</button></a></td>
+ 			 
+		</tr>	
 
 
-	<!-- this section is used for send the fetched data to (moderatorBook.java) -->
-<td><a href='moderatorBook?bookname=<%=bname%>'><button  class="btn btn-outline-info text-dark">View Pending Book</button></a></td>
-<td><a href='modModifyPendingBook.jsp?bookname=<%=bname%>&bId=<%=bid%>&authorname=<%=aname%>&publishername=<%=pname%>&editionname=<%=e%>&categoryname=<%=category%>>'><button  class="btn btn-outline-success text-dark">Modify</button></a></td>
-<td><a href='moderatorBook?bookname=<%=bname%>&bId=<%=bid%>'><button  class="btn btn-outline-danger text-dark">Delete</button></a></td>
-			
-			</tr>
-			
 			<%
 			}
 			%>
 			</tbody>
 			</table>
 			</div>
-		<script
+			<br>
+			<br>
+			
+		
+<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-		crossorigin="anonymous"></script>	
+		crossorigin="anonymous"></script>
 </body>
 </html>
